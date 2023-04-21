@@ -1,0 +1,440 @@
+.detalhe {
+    background-color: gray;
+}
+
+.detalhe p {
+    color: gray;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 250px;
+    margin-left: 50px;
+}
+
+.carrinho {
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+    margin-right: 25px;
+}
+
+.carrinho img {
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+.cliente {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.cliente img {
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+.acesso {
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar {
+    display: flex;
+    background-color: gray;
+    padding: 8px;
+}
+
+.navbar ol {
+    justify-content:space-between;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 70px;
+}
+
+.banner {
+    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    height: 30vh;
+    width: 88.2vw;
+}
+
+.banner img {
+    max-height: 30vh;
+    max-width: 88.2vw;
+}
+
+.produtos {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    display: inline-block;
+  }
+  
+.card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.price {
+color: black;
+font-size: 22px;
+font-weight:500px;
+padding: 5px;
+}
+
+.card button {
+border: none;
+outline: 0;
+padding: 12px;
+color: black;
+background-color: gray;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+margin-top: 10px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.card button:hover {
+opacity: 0.7;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    max-width: 88.2vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.logo-footer img {
+    max-width: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contato-footer {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container-footer {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.whatsapp-artesa {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 15px;
+}
+
+.whatsapp-artesa img {
+    max-width: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.top-bottom img {
+    max-width: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* INÍCIO CSS DA PÁGINA DO PRODUTO */
+
+.ficha-produto {
+    background-color: gray;
+    display: flex;
+    max-width: 88.2vw;
+    max-height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.produto-imagem img {
+    width: 430px;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.produto-valores {
+}
+
+/*EXISTE TODA UMA GAMBIARRA POR TRÁS DESSA SECTION...
+O IDEAL SERIA REFAZER COM EMPILHAMENTO CORRETO DE DIV*/
+
+.titulo-produto {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: auto;
+    margin-left: 380px;
+    margin-top: 50px;
+}
+
+.produto-pagamentos {
+    display: inline-flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-left: 190px;
+    margin-top: 80px;
+}
+
+.preco {
+    margin-left: auto;
+    margin-left: 50px;
+    font-size: 45px;
+}
+
+.parcelamento {
+    margin-left: 60px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.container-04 {
+    width: 70px;
+}
+
+.produto-rate {
+    display: block;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.produto-rate {
+}
+
+.produto-rate img {
+    max-width: 70px;
+    margin-left: -10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.quantidades-carrinho {
+    margin-left: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 150px;
+}
+
+.fundo-botao {
+    background-color: white;
+    max-width: 110px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+
+}
+
+.quantidades-carrinho p {
+    margin-left: 10px;
+}
+
+.carrinho-botoes {
+    background: white;
+	color: black;
+    border-radius: 15px;
+    width: 25px;
+    height: 25px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.carrinho-botoes:hover {
+    background-color: gray;
+    border-color: none;
+    color: white;
+}
+
+.container-02 {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.frete {
+    max-width: 150px;
+    margin-right: auto;
+    margin-left: 390px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.frete img {
+    max-width: 8px;    
+}
+
+.frete button {
+    background: white;
+	color: black;
+    border-radius: 15px;
+    width: 120px;
+    height: 30px;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.frete button:hover {
+    background-color: gray;
+    border-color: none;
+    color: white;
+}
+
+.sobre-produto {
+    max-width: 88.2vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.descricao-produto {
+     font-size: 24px;
+     font-weight: bold;
+}
+
+.sobre-produto p {
+    text-align: justify;
+    line-height: 20px;
+    margin-top: 15px;
+}
+
+.produtos-semelhantes {
+    max-width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/*AQUI COMEÇA A ESTILIZAÇÃO DA PÁGINA DE LOGIN*/
+
+
+.container-05 {
+    background-color: gray;
+    max-width: 88.2vw;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.nome-cliente{
+    width: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.boas-vindas {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boas-vindas-text {
+    max-width: 450px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.container-06 {
+    display: block;
+    max-width: 450px;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+
+.boas-vindas-cliente {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.esqueci-senha {
+    text-align: right;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.label-texto {
+    margin: 15px;
+}
+
+.label-input {
+    background-color: white;
+    width: 400px;
+    border-radius: 5px;
+    height: 20px;
+    padding: 0;
+}
+
+.login {
+    background-color: whitegray;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container-08 {
+    display: flex;
+    margin-left: auto;
+}
+
+.container-07 {
+    margin:auto;
+    width: 400px;
+    background-color: red;
+    margin-left: 350px;
+}
