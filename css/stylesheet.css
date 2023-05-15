@@ -1,19 +1,14 @@
-.detalhe {
-    background-color: gray;
-}
-
-.detalhe p {
-    color: gray;
-}
 
 .header {
     display: flex;
     justify-content: space-between;
+    background-color: #f7f4e6;
 }
 
 .logo img {
-    max-width: 250px;
     margin-left: 50px;
+    margin-top: 5px;
+    width: 600px;
 }
 
 .carrinho {
@@ -47,7 +42,8 @@
 
 .navbar {
     display: flex;
-    background-color: gray;
+    background-color: #f7f4e6;
+    border-bottom: 1px solid #f8a227;
     padding: 8px;
 }
 
@@ -64,7 +60,7 @@
 }
 
 .banner {
-    background-color: gray;
+    background-color: #f8a227;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
@@ -115,7 +111,7 @@ border: none;
 outline: 0;
 padding: 12px;
 color: black;
-background-color: gray;
+background-color: #f8a227;
 text-align: center;
 cursor: pointer;
 width: 100%;
@@ -185,7 +181,7 @@ opacity: 0.7;
 /* INÍCIO CSS DA PÁGINA DO PRODUTO */
 
 .ficha-produto {
-    background-color: gray;
+    background-color: #f8a227;
     display: flex;
     max-width: 88.2vw;
     max-height: 60vh;
@@ -293,7 +289,7 @@ O IDEAL SERIA REFAZER COM EMPILHAMENTO CORRETO DE DIV*/
 }
 
 .carrinho-botoes:hover {
-    background-color: gray;
+    background-color: #f8a227;
     border-color: none;
     color: white;
 }
@@ -327,7 +323,7 @@ O IDEAL SERIA REFAZER COM EMPILHAMENTO CORRETO DE DIV*/
 }
 
 .frete button:hover {
-    background-color: gray;
+    background-color: #f8a227;
     border-color: none;
     color: white;
 }
@@ -364,7 +360,7 @@ O IDEAL SERIA REFAZER COM EMPILHAMENTO CORRETO DE DIV*/
 
 
 .container-05 {
-    background-color: gray;
+    background-color: #f8a227;
     max-width: 88.2vw;
     height: 500px;
     margin-left: auto;
@@ -426,7 +422,7 @@ O IDEAL SERIA REFAZER COM EMPILHAMENTO CORRETO DE DIV*/
 }
 
 .login {
-    background-color: whitegray;
+    background-color: white#f8a227;
     width: 400px;
     height: 50px;
     font-size: 20px;
