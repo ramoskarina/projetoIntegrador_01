@@ -2,6 +2,8 @@ let products = []
 let selectedProduct = {}
 let type = ""
 
+const API_URL = "http://localhost:8080";
+
 const getHeaders = () => {
   const token = localStorage.getItem("token")
   return {
@@ -9,28 +11,7 @@ const getHeaders = () => {
   }
 }
 
-const getProducts = () => {
-  $.ajax({
-    url: `${API_URL}/products`,
-    method: 'GET',
-    dataType: 'json',
-    success: function (response) {
-      var table = $('table');
-      var 
-      products = response
-      for (var i = 0; i < response.length; i++) {
-        table.empty()
-        const product = response[i]
-        table.append(productTable(product));
-      }
-    },
-  })
-}
-
-const API_URL = "http://localhost:8080";
-
-$(document).ready(function () {
-
+const authenticate = () => {
   var username = prompt('Digite o seu nome de usuário:');
   var password = prompt('Digite a sua senha:');
   $.ajax({
@@ -54,57 +35,26 @@ $(document).ready(function () {
       alert(e.responseJSON.message);
     }
   });
-});
+}
 
-
-const contactMsg = (contact) => `
-<div class="message">
-  <strong>De: </strong> ${contact.name}
-  <br />
-  <strong>E-mail: </strong> ${contact.email}
-  <br />
-  <strong>Mensagem: </strong> ${contact.message}
-</div>`;
-
-const productTable = (product) => `
-<tr data-product-id=${product.id}>
-  <td>${product.name}</td>
-  <td>R$ ${product.value}</td>
-  <td><img src="${product.picture}" width="30px"></td>
-  <td>
-    <button class="edit-button">Editar</button> 
-    <button>Excluir</button>
-  </td>
-</tr>`;
-
-
-const openModal = () => {
-  $("#edit-modal").css("display", "block");
-  $("#input-name").val(selectedProduct.name)
-  $("#input-price").val(selectedProduct.value)
-  $("#input-picture").val(selectedProduct.picture)
-  $("#input-description").val(selectedProduct.description)
-};
-
-$(document).ready(function () {
-  $(document).on("click", ".edit-button", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    const productId = $(this).closest("tr").data("product-id");
-    selectedProduct = products.find(p => p.id === productId)
-    type = "update"
-    openModal(productId);
-  });
-  $(document).on("click", ".close", function () {
-    $("#edit-modal").css("display", "none");
+const getProducts = () => {
+  $.ajax({
+    url: `${API_URL}/products`,
+    method: 'GET',
+    dataType: 'json',
+    success: function (response) {
+      var table = $('table');
+      table.find('tr').not(':first').remove();
+      products = response
+      for (var i = 0; i < response.length; i++) {
+        const product = response[i]
+        table.append(productTable(product));
+      }
+    },
   })
-});
+}
 
-$(document).ready(() => {
-  getProducts()
-});
-
-$(document).ready(function () {
+const onSubmit = () => {
   $("form").submit(function (e) {
     e.preventDefault();
 
@@ -129,10 +79,68 @@ $(document).ready(function () {
       contentType: 'application/json',
       data: JSON.stringify(product),
       headers: getHeaders(),
-      success: getProducts()
-
+      success: function () {
+        getProducts()
+      }
     })
     $("#edit-modal").css("display", "none");
     $("form")[0].reset();
   });
-})
+}
+
+const contactMsg = (contact) => `
+<div class="message">
+  <strong>De: </strong> ${contact.name}
+  <br />
+  <strong>E-mail: </strong> ${contact.email}
+  <br />
+  <strong>Mensagem: </strong> ${contact.message}
+</div>`;
+
+const productTable = (product) => `
+<tr data-product-id=${product.id}>
+  <td>${product.name}</td>
+  <td>R$ ${product.value}</td>
+  <td><img src="${product.picture}" width="30px"></td>
+  <td>
+    <button class="edit-button">Editar</button> 
+    <button>Excluir</button>
+  </td>
+</tr>`;
+
+
+const openModal = () => {
+  $("#edit-modal").css("display", "block");
+  if (selectedProduct) {
+    $("#input-name").val(selectedProduct.name)
+    $("#input-price").val(selectedProduct.value)
+    $("#input-picture").val(selectedProduct.picture)
+    $("#input-description").val(selectedProduct.description)
+  }
+};
+
+$(document).ready(() => {
+  authenticate()
+  getProducts()
+  onSubmit()
+
+  $(document).on("click", ".edit-button", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const productId = $(this).closest("tr").data("product-id");
+    selectedProduct = products.find(p => p.id === productId)
+    console.log(selectedProduct)
+    type = "update"
+    openModal(productId);
+  });
+  $(document).on("click", ".close", function () {
+    $("#edit-modal").css("display", "none");
+  })
+  $(document).on("click", "#add-product-btn", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    type = "create"
+    selectedProduct = {}
+    openModal();
+  })
+});

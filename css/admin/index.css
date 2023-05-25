@@ -52,6 +52,7 @@ input[type="submit"] {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .section {
@@ -108,5 +109,5 @@ input[type="submit"] {
   width: 220px;
   padding: 10px;
   margin: 10px;
-  background: rgb(222, 224, 222);
+  background: rgb(222, 223, 224);
 }
