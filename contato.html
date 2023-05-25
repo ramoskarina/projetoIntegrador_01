@@ -68,11 +68,11 @@
     <section class="container-orcamento">
       <div class="div-label">
         <!--<h1>preencha as informações com o motivo do seu contato ou pedido de orçamento personalizado</h1>-->
-        <div class="formulario-orcamento">
-          <label class="label-texto">seu nome</label><br />
-          <input class="label-input" type="text" /><br /><br />
+        <form class="formulario-orcamento">
+          <label class="label-texto" >seu nome</label><br />
+          <input class="label-input" type="text" name="name"/><br /><br />
           <label class="label-texto">seu e-mail</label><br />
-          <input class="label-input" type="text" /><br /><br />
+          <input class="label-input" type="email" name="email"/><br /><br />
           <label class="label-texto"
             >descrição detalhada do seu pedido ou motivo de contato</label
           ><br />
@@ -83,8 +83,8 @@
           ><br />
           <textarea name="orcamento-personalizado-imagens"></textarea
           ><br /><br />
-        </div>
-        <button class="botao-orcamento">enviar pedido de orçamento</button>
+          <input type="submit" class="botao-orcamento" value="enviar pedido de orçamento"></button>
+        </form>
       </div>
 
       <div class="container-09">
@@ -140,5 +140,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/jquery@3.4.0/dist/jquery.min.js"></script>
+    <script src="../js/contact.js" async></script>
   </body>
 </html>

@@ -65,10 +65,19 @@ input[type="submit"] {
   margin-bottom: 10px;
 }
 
-.message {
+.card-contact {
   margin-bottom: 10px;
   padding: 10px;
   background-color: #e0e0e0;
+}
+
+.card-contact p {
+  font-size: 14px;
+  margin-top: 5px;  
+}
+
+.card-contact span {
+font-weight: 600;
 }
 
 .modal {
