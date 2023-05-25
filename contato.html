@@ -1,101 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" media="screen" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-</head>
-<body>
-
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/reset.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/stylesheet.css"
+      media="screen"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">
-            <img src="./css/img/COsturices_da_Rose__1_-removebg-preview.png", alt="Logo Costurices da Rose">
+      <div class="logo">
+        <img
+          src="./css/img/COsturices_da_Rose__1_-removebg-preview.png"
+          ,
+          alt="Logo Costurices da Rose"
+        />
+      </div>
+      <div class="carrinho">
+        <img
+          src="./css/img/shopping-cart.png"
+          ,
+          alt="Ícone de carrinho de compras"
+        />
+        <a href="#">carrinho</a>
+      </div>
+      <div class="cliente">
+        <img src="./css/img/user.png" , alt="Foto do usuário" />
+        <div>
+          <p>bem vindo, Cliente</p>
+          <div class="acesso">
+            <a href="login.html">login</a>
+          </div>
         </div>
-        <div class="carrinho">
-            <img src="./css/img/shopping-cart.png", alt="Ícone de carrinho de compras">
-            <a href="#">carrinho</a>
-        </div>
-        <div class="cliente">
-            <img src="./css/img/user.png", alt="Foto do usuário">
-            <div>
-                <p>bem vindo, Cliente</p>
-                <div class="acesso">
-                    <a href="login.html">login</a>
-                </div>    
-            </div>
-        </div>
+      </div>
     </header>
 
     <nav class="navbar">
-        <ol>
-            <li>
-                <a href="index.html">home</a>
-            </li>
-            <li>
-                <a href="produtos.html">produtos</a>
-            </li>
-            <li>
-                <a href="contato.html">contato</a>
-            </li>
-        </ol>
+      <ol>
+        <li>
+          <a href="index.html">home</a>
+        </li>
+        <li>
+          <a href="produtos.html">produtos</a>
+        </li>
+        <li>
+          <a href="contato.html">contato</a>
+        </li>
+      </ol>
     </nav>
 
-
     <section class="container-orcamento">
-        <div class="div-label">
-            <!--<h1>preencha as informações com o motivo do seu contato ou pedido de orçamento personalizado</h1>-->
-                <div class="formulario-orcamento">
-                    <label class="label-texto">seu nome</label><br>
-                    <input class="label-input" type="text"><br><br>
-                    <label class="label-texto">seu e-mail</label><br>
-                    <input class="label-input" type="text"><br><br>
-                    <label class="label-texto">descrição detalhada do seu pedido ou motivo de contato</label><br>
-                    <textarea name="orcamento-personalizado"></textarea><br><br>
-                    <label class="label-texto">em caso de pedido de orçamento, insira aqui o link de suas referências</label><br>
-                    <textarea name="orcamento-personalizado-imagens"></textarea><br><br>
-                </div>
-                <button class="botao-orcamento">enviar pedido de orçamento</button>
+      <div class="div-label">
+        <!--<h1>preencha as informações com o motivo do seu contato ou pedido de orçamento personalizado</h1>-->
+        <div class="formulario-orcamento">
+          <label class="label-texto">seu nome</label><br />
+          <input class="label-input" type="text" /><br /><br />
+          <label class="label-texto">seu e-mail</label><br />
+          <input class="label-input" type="text" /><br /><br />
+          <label class="label-texto"
+            >descrição detalhada do seu pedido ou motivo de contato</label
+          ><br />
+          <textarea name="orcamento-personalizado"></textarea><br /><br />
+          <label class="label-texto"
+            >em caso de pedido de orçamento, insira aqui o link de suas
+            referências</label
+          ><br />
+          <textarea name="orcamento-personalizado-imagens"></textarea
+          ><br /><br />
         </div>
+        <button class="botao-orcamento">enviar pedido de orçamento</button>
+      </div>
 
-        <div class="container-09">
-            <h1>Gostaria de um orçamento personalizado ou entrar em contato para tirar dúvidas?</h1><br>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum congue lorem, sed tincidunt velit vulputate at. Donec sed nunc justo. Nunc ut leo sit amet justo semper pellentesque. Morbi non diam tincidunt, aliquet augue id, accumsan odio. Suspendisse eget diam tempus, hendrerit dolor eu, ultrices ex. Morbi in libero felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br>
-                Aenean nulla elit, ullamcorper ac dui sed, consectetur fringilla justo. Etiam et blandit velit, at fermentum justo. Aliquam hendrerit neque ut sapien porta venenatis. Vestibulum luctus mauris in fermentum ultrices. Duis venenatis quam sit amet finibus dictum. Proin libero felis, maximus ac nulla ut, laoreet finibus nunc. Duis lorem enim, vulputate sed risus in, mollis convallis turpis. Aenean volutpat euismod magna, sed commodo diam gravida nec. Duis finibus sed sapien at semper.
-            </p>
-        </div>
+      <div class="container-09">
+        <h1>
+          Gostaria de um orçamento personalizado ou entrar em contato para tirar
+          dúvidas?
+        </h1>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+          vestibulum congue lorem, sed tincidunt velit vulputate at. Donec sed
+          nunc justo. Nunc ut leo sit amet justo semper pellentesque. Morbi non
+          diam tincidunt, aliquet augue id, accumsan odio. Suspendisse eget diam
+          tempus, hendrerit dolor eu, ultrices ex. Morbi in libero felis. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit.<br /><br />
+          Aenean nulla elit, ullamcorper ac dui sed, consectetur fringilla
+          justo. Etiam et blandit velit, at fermentum justo. Aliquam hendrerit
+          neque ut sapien porta venenatis. Vestibulum luctus mauris in fermentum
+          ultrices. Duis venenatis quam sit amet finibus dictum. Proin libero
+          felis, maximus ac nulla ut, laoreet finibus nunc. Duis lorem enim,
+          vulputate sed risus in, mollis convallis turpis. Aenean volutpat
+          euismod magna, sed commodo diam gravida nec. Duis finibus sed sapien
+          at semper.
+        </p>
+      </div>
     </section>
 
     <footer>
-        <div class="rodape">
-            <div class="logo-footer">
-                <img src="./css/img/logo_marrom.png", alt="Logo Costurices da Rose">
-            </div>
-            <div class="contato-footer">
-                <ol>
-                    <li>vendas@costurices.com.br</li>
-                    <li>(11) 4678-0000</li>
-                    <li>CNPJ 5894.18646.48494-3</li>
-                </ol>
-            </div>
-            <div class="container-footer">
-                <a href="#">política de frete, trocas e devoluções</a>
-            </div>
-            <div class="whatsapp-artesa">
-                <img src="./css/img/whatsapp.png", alt="logo whatsapp">
-                fale com a artesã
-            </div>
-            <div class="top-bottom">
-                <img src="./css/img/page up.png", alt="topo da página">
-            </div>
+      <div class="rodape">
+        <div class="logo-footer">
+          <img
+            src="./css/img/logo_marrom.png"
+            ,
+            alt="Logo Costurices da Rose"
+          />
         </div>
+        <div class="contato-footer">
+          <ol>
+            <li>vendas@costurices.com.br</li>
+            <li>(11) 4678-0000</li>
+            <li>CNPJ 5894.18646.48494-3</li>
+          </ol>
+        </div>
+        <div class="container-footer">
+          <a href="#">política de frete, trocas e devoluções</a>
+        </div>
+        <div class="whatsapp-artesa">
+          <img src="./css/img/whatsapp.png" , alt="logo whatsapp" />
+          fale com a artesã
+        </div>
+        <div class="top-bottom">
+          <img src="./css/img/page up.png" , alt="topo da página" />
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

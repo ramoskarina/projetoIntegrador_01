@@ -1,6 +1,61 @@
 let products = []
-selectedProduct = {}
-const type = ""
+let selectedProduct = {}
+let type = ""
+
+const getHeaders = () => {
+  const token = localStorage.getItem("token")
+  return {
+    authorization: `Bearer ${token}`
+  }
+}
+
+const getProducts = () => {
+  $.ajax({
+    url: `${API_URL}/products`,
+    method: 'GET',
+    dataType: 'json',
+    success: function (response) {
+      var table = $('table');
+      var 
+      products = response
+      for (var i = 0; i < response.length; i++) {
+        table.empty()
+        const product = response[i]
+        table.append(productTable(product));
+      }
+    },
+  })
+}
+
+const API_URL = "http://localhost:8080";
+
+$(document).ready(function () {
+
+  var username = prompt('Digite o seu nome de usuário:');
+  var password = prompt('Digite a sua senha:');
+  $.ajax({
+    url: `${API_URL}/users/authenticate`,
+    type: 'POST',
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify({
+      email: username,
+      password: password
+    }),
+    success: function (response) {
+      if (response.user.role !== "admin") {
+        return alert("Você não é administrador")
+      }
+      localStorage.setItem("user", JSON.stringify(response.user))
+      localStorage.setItem("token", response.sessionToken)
+      $("body").css("display", "block")
+    },
+    error: function (e) {
+      alert(e.responseJSON.message);
+    }
+  });
+});
+
 
 const contactMsg = (contact) => `
 <div class="message">
@@ -11,8 +66,6 @@ const contactMsg = (contact) => `
   <strong>Mensagem: </strong> ${contact.message}
 </div>`;
 
-
-alert("oi")
 const productTable = (product) => `
 <tr data-product-id=${product.id}>
   <td>${product.name}</td>
@@ -39,6 +92,7 @@ $(document).ready(function () {
     e.stopPropagation();
     const productId = $(this).closest("tr").data("product-id");
     selectedProduct = products.find(p => p.id === productId)
+    type = "update"
     openModal(productId);
   });
   $(document).on("click", ".close", function () {
@@ -46,49 +100,37 @@ $(document).ready(function () {
   })
 });
 
-
-const API_URL = "http://localhost:8080";
 $(document).ready(() => {
-  $.ajax({
-    url: `${API_URL}/products`,
-    method: 'GET',
-    dataType: 'json',
-    success: function (response) {
-      var table = $('table');
-      products = response
-      for (var i = 0; i < response.length; i++) {
-        const product = response[i]
-        table.append(productTable(product));
-      }
-    },
-  })
+  getProducts()
 });
-
 
 $(document).ready(function () {
   $("form").submit(function (e) {
     e.preventDefault();
 
     const name = $("#input-name").val();
-    const price = $("#input-price").val();
+    const value = $("#input-price").val();
     const picture = $("#input-picture").val();
     const description = $("#input-description").val();
 
     const product = {
-      name: name,
-      price: price,
-      picture: picture,
-      description: description
+      name,
+      value,
+      picture,
+      description,
     };
 
-    const method = type === "update" ? "PUT" : "POST"
+    const method = type === "update" ? "PATCH" : "POST"
     const url = type === "update" ? `/products/${selectedProduct.id}` : "/products";
     $.ajax({
       url: `${API_URL}${url}`,
       method,
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify(product)
+      data: JSON.stringify(product),
+      headers: getHeaders(),
+      success: getProducts()
+
     })
     $("#edit-modal").css("display", "none");
     $("form")[0].reset();
