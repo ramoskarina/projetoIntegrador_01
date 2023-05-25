@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página do Administrador</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/reset.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/admin/index.css"
+      media="screen"
+    />
+  </head>
+  <body>
+    <h1>Página do Administrador</h1>
+
+    <table>
+      <tr class="table-head">
+        <th>Nome do Produto</th>
+        <th>Preço</th>
+        <th>Foto</th>
+        <th>Ações</th>
+      </tr>
+    </table>
+    <button class="add-product">Adicionar Produto</button>
+    <form>
+      <div id="edit-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Editar Produto</h2>
+          <form>
+            <input type="text" placeholder="Nome do Produto" id="input-name"/>
+            <input type="text" placeholder="Preço" id="input-price"/>
+            <input type="text" placeholder="Foto URL" id="input-picture"/>
+            <textarea placeholder="Descrição do Produto" id="input-description"></textarea>
+            <input type="submit" value="Salvar" />
+          </form>
+        </div>
+      </div>
+    </form>
+
+    <div class="section">
+      <h2>Orçamentos Recebidos</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/admin.js" async></script>
+  </body>
+</html>

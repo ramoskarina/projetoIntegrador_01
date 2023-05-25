@@ -1,0 +1,19 @@
+{
+  "name": "projeto-integrador-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramoskarina/projetoIntegrador_01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramoskarina/projetoIntegrador_01/issues"
+  },
+  "homepage": "https://github.com/ramoskarina/projetoIntegrador_01#readme"
+}

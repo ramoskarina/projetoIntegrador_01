@@ -31,22 +31,22 @@
                 </div>    
             </div>
         </div>
+      </div>
     </header>
 
     <nav class="navbar">
-        <ol>
-            <li>
-                <a href="index.html">home</a>
-            </li>
-            <li>
-                <a href="produtos.html">produtos</a>
-            </li>
-            <li>
-                <a href="contato.html">contato</a>
-            </li>
-        </ol>
+      <ol>
+        <li>
+          <a href="index.html">home</a>
+        </li>
+        <li>
+          <a href="produtos.html">produtos</a>
+        </li>
+        <li>
+          <a href="contato.html">contato</a>
+        </li>
+      </ol>
     </nav>
-
 
     <section class="ficha-produto">
         <div class="produto-imagem">
@@ -88,19 +88,35 @@
                     </button>
                 </div>
             </div>
+            <p>adicionar ao carrinho</p>
+          </div>
+          <div class="frete">
+            <p>calculadora de frete</p>
+            <button class="calc-CEP">
+              insira seu CEP
+              <img src="./css/img/next.png" />
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <div class="sobre-produto">
-        <p class="descricao-produto">Sobre o produto</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere maximus enim non hendrerit. In congue pulvinar feugiat. Nunc quis metus ullamcorper,
-            maximus lacus sed, euismod sem. Aliquam eu est velit. Nulla hendrerit, dui ac vestibulum porttitor, sem nibh gravida felis, et cursus orci felis ac libero. Cras
-            sed sapien enim. Curabitur turpis quam, pharetra ut sodales vestibulum, placerat a sem. Suspendisse potenti. In vitae augue justo. Nunc tortor neque, vehicula
-            a elementum condimentum, molestie eu elit. Nulla sit amet auctor libero.
-            
-            
-            Nunc dignissim in nibh et iaculis. Mauris at lacus nunc. Mauris semper, tortor et mollis molestie, risus lectus mollis justo, nec dignissim mauris erat id urna.
-            Nulla at malesuada turpis. Praesent lacinia at dolor molestie faucibus. Curabitur maximus.</p>
+      <p class="descricao-produto-titulo">Sobre o produto</p>
+      <p id="descricao-produto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+        maximus enim non hendrerit. In congue pulvinar feugiat. Nunc quis metus
+        ullamcorper, maximus lacus sed, euismod sem. Aliquam eu est velit. Nulla
+        hendrerit, dui ac vestibulum porttitor, sem nibh gravida felis, et
+        cursus orci felis ac libero. Cras sed sapien enim. Curabitur turpis
+        quam, pharetra ut sodales vestibulum, placerat a sem. Suspendisse
+        potenti. In vitae augue justo. Nunc tortor neque, vehicula a elementum
+        condimentum, molestie eu elit. Nulla sit amet auctor libero. Nunc
+        dignissim in nibh et iaculis. Mauris at lacus nunc. Mauris semper,
+        tortor et mollis molestie, risus lectus mollis justo, nec dignissim
+        mauris erat id urna. Nulla at malesuada turpis. Praesent lacinia at
+        dolor molestie faucibus. Curabitur maximus.
+      </p>
     </div>
 
     <div>
@@ -171,6 +187,9 @@
                 <img src="./css/img/page up.png", alt="topo da página">
             </div>
         </div>
+      </div>
     </footer>
-</body>
+    <script src="https://unpkg.com/jquery@3.4.0/dist/jquery.min.js"></script>
+    <script src="../js/product-page.js" async></script>
+  </body>
 </html>
