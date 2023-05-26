@@ -4,23 +4,24 @@ body {
 
 a {
     text-decoration: none;
-    color: #f8a227;
+    color: #000;
+    font-size: 20px;
 }
 
 a:visited {
-    color: #f8a227;
+    color: #000;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     background-color: #f7f4e6;
+    justify-content: center;
 }
 
 .logo img {
-    margin-left: 50px;
     margin-top: 5px;
-    width: 600px;
+    width: 1600px;
 }
 
 .carrinho {
@@ -54,8 +55,7 @@ a:visited {
 
 .navbar {
     display: flex;
-    background-color: #f7f4e6;
-    border-bottom: 1px solid #f8a227;
+    background-color: #fb817b;
     padding: 8px;
 }
 
@@ -72,7 +72,7 @@ a:visited {
 }
 
 .banner {
-    background-color: #f8a227;
+    background-color: #fb817b;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
@@ -123,7 +123,7 @@ border: none;
 outline: 0;
 padding: 12px;
 color: black;
-background-color: #f8a227;
+background-color: #fb817b;
 text-align: center;
 cursor: pointer;
 width: 100%;
@@ -193,7 +193,7 @@ opacity: 0.7;
 /* INÍCIO CSS DA PÁGINA DO PRODUTO */
 
 .ficha-produto {
-    background-color: #f8a227;
+    background-color: #fb817b;
     display: flex;
     max-width: 88.2vw;
     max-height: 60vh;
@@ -293,7 +293,7 @@ opacity: 0.7;
 }
 
 .carrinho-botoes:hover {
-    background-color: #f8a227;
+    background-color: #fb817b;
     border-color: none;
     color: white;
 }
@@ -327,7 +327,7 @@ opacity: 0.7;
 }
 
 .frete button:hover {
-    background-color: #f8a227;
+    background-color: #fb817b;
     border-color: none;
     color: white;
 }
@@ -364,7 +364,7 @@ opacity: 0.7;
 
 
 .container-05 {
-    background-color: #f8a227;
+    background-color: #fb817b;
     max-width: 88.2vw;
     height: 500px;
     margin-left: auto;
@@ -426,7 +426,7 @@ opacity: 0.7;
 }
 
 .login {
-    background-color: white#f8a227;
+    background-color: white#fb817b;
     width: 400px;
     height: 50px;
     font-size: 20px;
@@ -455,7 +455,7 @@ opacity: 0.7;
     max-width: 600px;
     margin-left: 100px;
     margin-right: auto;
-    background-color: #f7f4e6;
+    background-color: #ffeaf2;
     padding: 30px;
     border-radius: 15px;
 }
@@ -486,7 +486,7 @@ textarea {
 }
 
 .container-09 {
-    background-color: #f8a227;
+    background-color: #fb817b;
     text-align: center;
     margin: auto;
     width: 700px;
